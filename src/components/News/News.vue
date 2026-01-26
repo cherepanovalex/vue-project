@@ -9,6 +9,9 @@ interface NewsProps {
 defineProps<{
   newsItems: NewsProps[],
 }>()
+
+
+
 </script>
 
 <template>
@@ -25,6 +28,7 @@ defineProps<{
               {{ news.desc }}
             </a>
           </p>
+<!--кнопка вызова попапа редактирования новости    -->
         </li>
       </ul>
     </div>

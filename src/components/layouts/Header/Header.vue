@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import logo from '../../../assets/img/logo-red.svg'
 import Menu from "@/components/layouts/Header/Menu.vue";
+import Profile from "@/components/Profile.vue";
 
 
 const listMenu = [
@@ -33,6 +34,7 @@ const listMenu = [
       </div>
       <Menu :menuItems="listMenu"/>
     </div>
+    <Profile/>
   </header>
 </template>
 
