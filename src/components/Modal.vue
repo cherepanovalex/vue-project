@@ -22,7 +22,6 @@ const emit = defineEmits<{
 function editForm() {
   emit('update:firstName', first.value);
   emit('update:lastName', last.value);
-
 }
 function close() {
   valueModal.value = false
@@ -49,8 +48,8 @@ watch(valueModal, (value: boolean) => {
       <input v-model="first"/>
       <input v-model="last"/>
       <button>click</button>
+      <button @click="close" class="close-btn">x</button>
     </form>
-    <button @click="close">close</button>
   </div>
 </template>
 
@@ -59,6 +58,30 @@ watch(valueModal, (value: boolean) => {
   display: none;
 }
 .modal_visible {
-  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+form{
+  background: #ffffff;
+  padding: 40px;
+  display: flex;
+  position: relative;
+  gap: 10px;
+}
+.close-btn{
+  position: absolute;
+  right: 0;
+  top:0;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
 }
 </style>

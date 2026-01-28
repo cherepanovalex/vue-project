@@ -1,15 +1,14 @@
 <script setup lang="ts">
-interface NewsProps {
-  img: string,
-  link: string,
-  category: string,
-  desc: string
-}
+import type {NewsProps} from "@/types/types.ts";
 
 defineProps<{
   newsItems: NewsProps[],
 }>()
 
+
+const emit = defineEmits<{
+  (e: 'edit-news', id: number): void
+}>();
 
 
 </script>
@@ -18,7 +17,7 @@ defineProps<{
   <div class="container">
     <div class="news-section">
       <ul class="news">
-        <li v-for="news in newsItems" class="news__item">
+        <li v-for="news in newsItems" class="news__item" :key="news.id">
           <a :href="news.link">
             <img :src="news.img" alt="news">
           </a>
@@ -28,7 +27,7 @@ defineProps<{
               {{ news.desc }}
             </a>
           </p>
-<!--кнопка вызова попапа редактирования новости    -->
+          <button @click="emit('edit-news', news.id)" class="news__edit_btn">Edit</button>
         </li>
       </ul>
     </div>
@@ -65,6 +64,9 @@ defineProps<{
     font-weight: bold;
     padding: 10px 0;
     text-transform: uppercase;
+  }
+  .news__edit_btn{
+    padding: 5px;
   }
 }
 

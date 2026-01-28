@@ -12,7 +12,7 @@ const open = () => {
 </script>
 
 <template>
-  <div>
+  <div class="container">
     <h2>{{firstName}} {{lastName}}</h2>
     <button @click="open">Open Modal</button>
     <Modal
