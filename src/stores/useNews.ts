@@ -1,0 +1,25 @@
+import {defineStore} from "pinia";
+import axios from "axios";
+import {ref} from "vue";
+import type {newsApi} from "@/types/news";
+
+export const useNews = defineStore('useNews', () => {
+    const data = ref<newsApi>();
+
+    const fetchNewsData = async () => {
+        const url = "https://newsapi.org/v2/everything?q=tesla&from=2026-01-03&sortBy=publishedAt&apiKey=7eb7d540082648889635783ae5fe514a"
+        return await axios.get(url)
+    }
+    const getNewsData = async () => {
+        try {
+            const response = await fetchNewsData();
+            data.value = response.data
+        } catch (error) {
+            console.error(error)
+        }
+    }
+    return{
+        data,
+        getNewsData
+    }
+})

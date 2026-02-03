@@ -6,16 +6,16 @@ import Profile from "@/components/Profile.vue";
 
 const listMenu = [
   {
-    link: 'https://39olimp.com/index.php?page=vgames',
-    name: 'link1'
+    link: '/about',
+    name: 'About'
   },
   {
-    link: 'https://39olimp.com/betgames',
-    name: 'link2'
+    link: '/university',
+    name: 'University'
   },
   {
-    link: 'https://39olimp.com/index.php?page=line&action=1',
-    name: 'link3'
+    link: '/news',
+    name: 'News'
   },
   {
     link: 'https://39olimp.com/live',
@@ -28,9 +28,9 @@ const listMenu = [
   <header>
     <div class="container">
       <div class="logo">
-        <a href="#" class="logo">
+        <router-link to="/">
           <img :src="logo" alt="logo">
-        </a>
+        </router-link>
       </div>
       <Menu :menuItems="listMenu"/>
     </div>

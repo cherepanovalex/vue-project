@@ -12,7 +12,9 @@
 
 <template>
   <ul class="menu">
-    <li v-for="item in menuItems"><a :href="item.link">{{item.name}}</a></li>
+    <li v-for="item in menuItems">
+      <router-link :to="item.link">{{item.name}}</router-link>
+    </li>
   </ul>
 </template>
 
