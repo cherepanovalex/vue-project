@@ -32,7 +32,6 @@ const props = defineProps<{
         class="news-card__title"
         :href="props.article.url"
         target="_blank"
-        rel="noopener noreferrer"
       >
         {{ props.article.title }}
       </a>
@@ -62,7 +61,6 @@ const props = defineProps<{
 }
 
 .news-card:hover {
-  transform: translateY(-4px);
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.14);
 }
 
