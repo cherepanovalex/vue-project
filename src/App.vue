@@ -5,11 +5,17 @@ import Footer from "@/components/layouts/Footer/Footer.vue";
 </script>
 
 <template>
-  <Header/>
-  <router-view v-slot="{ Component }">
-    <component :is="Component"/>
-  </router-view>
-  <Footer/>
+  <div class="app-container">
+    <Header/>
+    <main class="page-content">
+      <router-view v-slot="{ Component }">
+        <component :is="Component"/>
+      </router-view>
+    </main>
+    <Footer/>
+  </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+
+</style>

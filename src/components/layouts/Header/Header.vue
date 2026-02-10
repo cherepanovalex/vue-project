@@ -18,8 +18,8 @@ const listMenu = [
     name: 'News'
   },
   {
-    link: 'https://39olimp.com/live',
-    name: 'link4'
+    link: '/firebase',
+    name: 'Firebase'
   },
 ]
 </script>

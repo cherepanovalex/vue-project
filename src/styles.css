@@ -18,3 +18,13 @@ a{
     text-decoration: none;
     color: #000;
 }
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.page-content {
+    flex: 1;
+}

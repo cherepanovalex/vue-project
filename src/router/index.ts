@@ -3,6 +3,7 @@ import About from "../views/About.vue";
 import Home from "../views/Home.vue";
 import University from "@/views/University.vue";
 import News from "@/views/News.vue";
+import Firebase from "@/views/Firebase.vue";
 
 const routes = [
 
@@ -25,6 +26,11 @@ const routes = [
         name: 'News',
         path: '/news',
         component: News
+    },
+    {
+        name: 'Firebase',
+        path: '/firebase',
+        component: Firebase
     }
 ]
 
