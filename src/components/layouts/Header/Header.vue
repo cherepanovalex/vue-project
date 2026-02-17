@@ -21,6 +21,10 @@ const listMenu = [
     link: '/firebase',
     name: 'Firebase'
   },
+  {
+    link: '/tasks',
+    name: 'Tasks'
+  },
 ]
 </script>
 

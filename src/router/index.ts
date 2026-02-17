@@ -4,6 +4,7 @@ import Home from "../views/Home.vue";
 import University from "@/views/University.vue";
 import News from "@/views/News.vue";
 import Firebase from "@/views/Firebase.vue";
+import Tasks from "@/views/Tasks.vue";
 
 const routes = [
 
@@ -31,6 +32,11 @@ const routes = [
         name: 'Firebase',
         path: '/firebase',
         component: Firebase
+    },
+    {
+        name: 'Tasks',
+        path: '/tasks',
+        component: Tasks
     }
 ]
 
